@@ -42,6 +42,8 @@ func _enter_tree() -> void:
 	popupMenu.connect("index_pressed", pressedItemPopupMenu)
 	popupMenu.connect("menu_changed", popupMenu_changed)
 
+	popupMenu_changed()
+
 func popupMenu_changed():
 	if popupMenu.get_item_index(SCRCPY_POPUPMENU_ITEM_ID) < 0:
 		popupMenu.add_item("SCRCPY MENU", SCRCPY_POPUPMENU_ITEM_ID)
